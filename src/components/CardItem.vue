@@ -1,6 +1,6 @@
 <template>
 <div class="card">
-    <router-link :to="'/single-news/'+ cardId">
+    <router-link :to="'/single-movie/'+ cardId">
         <div class="card-image">
             <figure class="image is-4by3">
                 <img :src="'https://image.tmdb.org/t/p/w500/'+ cardImage" :alt="cardTitle">

@@ -20,4 +20,8 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+.router-link-exact-active.router-link-active{
+  display: flex;
+  justify-content: center;
+}
 </style>
