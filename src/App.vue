@@ -15,6 +15,10 @@
 nav a {
   font-weight: bold;
   color: #2c3e50;
+ 
+}
+a{
+  font-size: 20px;
 }
 
 nav a.router-link-exact-active {

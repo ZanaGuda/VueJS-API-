@@ -70,4 +70,11 @@ img {
     /* margin-top: -75px; */
     display: flex;
 }
+@media(max-width:767px){
+ .card-list{
+  display: grid;
+  grid-template-columns: 1fr;
+ }
+
+}
 </style>
