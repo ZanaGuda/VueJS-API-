@@ -2,10 +2,12 @@
 <div id="app">
     <div class="container">
         <div class="search">
-            <input type="text" v-model="input">
+          <label class="label">Year based Search</label>
+            <input type="text" v-model="searchKeyYear">
             <br>
-            <input type="text" v-model="rate">
-            <button type="button" class="btn btn-primary" style="margin-left:10px" @click="fetchNews()">Search</button>
+            <label class="label">Rating based Search</label>
+            <input type="text" v-model="searchKeyRating">
+            <button type="button" class="btn btn-primary" style="margin-left:10px" v-on:click="fetchNews()">Search</button>
         </div>
         <div class="card-list">
             <CardItem v-for="news in newsList.results" :key="news.id" :cardTitle="news.name" :cardContent="news.overview" :cardImage="news.poster_path" :cardDate="news.first_air_date" :cardId="news.id">
@@ -26,15 +28,15 @@ export default {
     },
     data() {
         return {
-            input: "",
-            rate: "",
+            searchKeyYear: "",
+            searchKeyRating: "",
             newsList: []
         }
     },
     methods: {
         fetchNews() {
             var url =
-              'https://api.themoviedb.org/3/discover/movie?api_key=54106cb9e32f32a2f6c166158a3062d4&vote_average.gte=' + this.rate + '&vote_average.lte=' + this.rate + '&primary_release_year=' + this.input
+              'https://api.themoviedb.org/3/discover/movie?api_key=54106cb9e32f32a2f6c166158a3062d4&vote_average.gte=' + this.searchKeyRating + '&vote_average.lte=' + this.searchKeyRating + '&primary_release_year=' + this.searchKeyYear
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
