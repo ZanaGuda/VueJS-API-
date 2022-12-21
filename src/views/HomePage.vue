@@ -30,13 +30,14 @@ export default {
         return {
             searchKeyYear: "",
             searchKeyRating: "",
+            genre:"",
             movieList: []
         }
     },
     methods: {
         fetchNews() {
             var url =
-              'https://api.themoviedb.org/3/discover/movie?api_key=c246ec55d79f150e771a55ba99fa6c78&vote_average.gte=' + this.searchKeyRating + '&vote_average.lte=' + this.searchKeyRating + '&primary_release_year=' + this.searchKeyYear 
+              'https://api.themoviedb.org/3/discover/movie?api_key=c246ec55d79f150e771a55ba99fa6c78&vote_average.gte=' + this.searchKeyRating + '&vote_average.lte=' + this.searchKeyRating + '&primary_release_year=' + this.searchKeyYear
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
