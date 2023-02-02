@@ -81,4 +81,15 @@ img {
 #app{
         background: #191515;
 }
+.search{
+    justify-content: flex-end;
+        /* display: flex; */
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 </style>

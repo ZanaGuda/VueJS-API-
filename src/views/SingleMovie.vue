@@ -11,7 +11,7 @@
       <div class="single-article__content content">
         <div >{{ articleContent }} </div>
       </div>
-      <div class="single-article__rating">
+      <div class="single-article__rating" style="color:white">
         <div>Rating: {{ articleRating }}</div>
       </div>
     </div>
@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    font-weight: 900;">SIMILAR MOVIES</p>
+    font-weight: 900; color: white;">SIMILAR MOVIES</p>
   <div class="card-list">
    
   <CardItem v-for="news in similarMovies.results" :key="news.id" :cardTitle="news.name" :cardContent="news.overview"
@@ -75,16 +75,21 @@ export default {
 </script>
 
 <style>
+.single-article__content{
+  color: white;
+}
 .single-article {
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: left;
+  
 }
 .single-article__title{
       font-size: 50px;
         font-weight: 500;
         display: flex;
         justify-content: center;
+        color: white;
 }
 .single-article__image{
       display: flex;
