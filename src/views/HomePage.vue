@@ -2,10 +2,10 @@
 <div id="app">
     <div class="container">
         <div class="search">
-          <label class="label">Year based Search</label>
+          <label class="label" style="color:white">Year based Search</label>
             <input type="text" v-model="searchKeyYear">
             <br>
-            <label class="label">Rating based Search</label>
+            <label class="label" style="color:white">Rating based Search</label>
             <input type="text" v-model="searchKeyRating">
             <button type="button" class="btn btn-primary" style="margin-left:10px" v-on:click="fetchNews()">Search</button>
         </div>
@@ -77,5 +77,8 @@ img {
   grid-template-columns: 1fr;
  }
 
+}
+#app{
+        /* background: #191515; */
 }
 </style>
