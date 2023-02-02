@@ -79,6 +79,6 @@ img {
 
 }
 #app{
-        /* background: #191515; */
+        background: #191515;
 }
 </style>
